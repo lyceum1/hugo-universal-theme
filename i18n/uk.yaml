@@ -1,0 +1,116 @@
+- id: home
+  translation: "Головна"
+
+- id: templateBy
+  translation: "Шаблон від"
+
+- id: portedBy
+  translation: "Портований на Hugo"
+
+- id: contactGoTo
+  translation: "Сторінка контактів"
+
+- id: contactAddrTitle
+  translation: "Адреса"
+
+- id: contactTitle
+  translation: "Контакти"
+
+- id: contactForm
+  translation: "Контактна форма"
+
+- id: contactName
+  translation: "Ваше ім'я"
+
+- id: contactMail
+  translation: "Ваша електронна пошта"
+
+- id: contactMessage
+  translation: "Ваше повідомлення"
+
+- id: contactSend
+  translation: "Надіслати повідомлення"
+
+- id: navHome 
+  translation: "перейти на головну"
+
+- id: navToggle
+  translation: "Переключити навігацію"
+
+- id: categoriesTitle
+  translation: "Категорії"
+
+- id: searchTitle
+  translation: "Пошук"
+
+- id: tagsTitle
+  translation: "Теги"
+
+- id: continueReading
+  translation: "Продовжити"
+
+- id: readMore
+  translation: "Читати більше"
+
+- id: authorBy
+  translation: "від"
+
+- id: recentPosts
+  translation: "Останні новини"
+
+- id: aboutUs
+  translation: "Про нас"
+  
+- id: newer
+  translation: "Назад"
+
+- id: older
+  translation: "Далі"
+
+- id: publishedOn
+  translation: "на"
+
+- id: 404Error
+  translation: "Сторінка не знайдена"
+
+- id: 404Message
+  translation: "Нам прикро – ця сторінка більше не існує"
+
+- id: 404NavHome
+  translation: "Перейти до головної"
+
+- id: January
+  translation: Січень
+
+- id: February
+  translation: Лютий
+
+- id: March
+  translation: Березень
+
+- id: April
+  translation: Квітень
+
+- id: May
+  translation: Травень
+
+- id: June
+  translation: Червень
+
+- id: July
+  translation: Липень
+
+- id: August
+  translation: Серпень
+
+- id: September
+  translation: Вересень
+
+- id: October
+  translation: Жовтень
+
+- id: November
+  translation: Листопад
+
+- id: December
+  translation: Грудень
