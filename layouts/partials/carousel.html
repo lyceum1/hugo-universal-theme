@@ -1,7 +1,7 @@
 {{ if default true .Site.Params.CarouselHomepage.enable }}
 {{ if gt (len .Site.Data.carousel) 0 }}
 <section>
-    <div class="home-carousel">
+    <div class="home-carousel" style="background: url({{.Site.Params.CarouselHomepage.background}}) center center repeat; background-size: cover;">
         <div class="dark-mask"></div>
         <div class="container">
             <div class="homepage owl-carousel"

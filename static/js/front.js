@@ -377,3 +377,24 @@ $(window).resize(function () {
     windowWidth = newWindowWidth
   }
 })
+
+$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+  // Avoid following the href location when clicking
+  event.preventDefault();
+
+  // Avoid having the menu to close when clicking
+  event.stopPropagation(); 
+
+  for (const element of $('ul.dropdown-menu [data-toggle=dropdown]').parent()) {
+    // If a menu is already open we close it
+    if ($(element).hasClass('open')) {
+      $(element).removeClass('open');
+      if ($(element).children('a')[0] === this) {
+        return;
+      }
+    }
+  }
+
+  // Open clicked submenu
+  $(this).parent().addClass('open');
+})

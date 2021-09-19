@@ -1,12 +1,6 @@
 - id: home
   translation: "Головна"
 
-- id: templateBy
-  translation: "Шаблон від"
-
-- id: portedBy
-  translation: "Портований на Hugo"
-
 - id: contactGoTo
   translation: "Сторінка контактів"
 
@@ -79,38 +73,41 @@
 - id: 404NavHome
   translation: "Перейти до головної"
 
+- id: adminPage
+  translation: "Адміністрування"
+
 - id: January
-  translation: Січень
+  translation: Січня
 
 - id: February
-  translation: Лютий
+  translation: Лютого
 
 - id: March
-  translation: Березень
+  translation: Березня
 
 - id: April
-  translation: Квітень
+  translation: Квітня
 
 - id: May
-  translation: Травень
+  translation: Травня
 
 - id: June
-  translation: Червень
+  translation: Червня
 
 - id: July
-  translation: Липень
+  translation: Липня
 
 - id: August
-  translation: Серпень
+  translation: Серпня
 
 - id: September
-  translation: Вересень
+  translation: Вересня
 
 - id: October
-  translation: Жовтень
+  translation: Жовтня
 
 - id: November
-  translation: Листопад
+  translation: Листопада
 
 - id: December
-  translation: Грудень
+  translation: Грудня
