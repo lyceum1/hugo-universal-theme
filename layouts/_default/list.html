@@ -41,7 +41,7 @@
                                     <div class="clearfix">
                                         {{ if isset .Params "date" }}
 
-                                        {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                                        {{ $createdAt := .Date.Format .Site.Params.DateFormat }}
                                         {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
                                             {{ $createdAt = replace $createdAt $month (i18n $month) }}
                                         {{ end }}

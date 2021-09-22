@@ -3,11 +3,11 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="{{ "/" | relURL }}">
-                    {{ if default false .Site.Params.disabled_logo }}
-                      <h4>{{ .Site.Params.logo_text }}</h4>
+                    {{ if default false .Site.Params.Logo.enable }}
+                      <h4>{{ .Site.Params.Logo.Text }}</h4>
                     {{ else }}
-                      <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="hidden-xs hidden-sm" />
-                      <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="visible-xs visible-sm" />
+                      <img src="{{ .Site.Params.Logo.default | relURL }}" alt="{{ .Title }} logo" class="hidden-xs hidden-sm" />
+                      <img src="{{ .Site.Params.Logo.small | relURL }}" alt="{{ .Title }} logo" class="visible-xs visible-sm" />
                     {{ end }}
                     <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
                 </a>

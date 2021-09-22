@@ -1,15 +1,14 @@
-{{ if isset .Site.Params "recent_posts" }}
-{{ if .Site.Params.recent_posts.enable }}
+{{ if default false .Site.Params.RecentPosts.Enable }}
 <section class="bar background-white no-mb">
     <div class="container">
 
         <div class="col-md-12">
             <div class="heading">
-                <h2>{{ .Site.Params.recent_posts.title | markdownify }}</h2>
+                <h2>{{ .Site.Params.RecentPosts.Title | markdownify }}</h2>
             </div>
 
             <p class="lead">
-                {{ .Site.Params.recent_posts.subtitle | markdownify }}
+                {{ .Site.Params.RecentPosts.Subtitle | markdownify }}
             </p>
 
             <div class="row">
@@ -37,7 +36,7 @@
                         <div class="content">
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                             {{ if .Params.date }}
-                                {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                                {{ $createdAt := .Date.Format .Site.Params.DateFormat }}
                                 {{ range $index, $month := slice "January" "February" "March" "April" "May" "June"
                                     "July" "August" "September" "October" "November" "December" }}
                                     {{ $createdAt = replace $createdAt $month (i18n $month) }}
@@ -46,7 +45,7 @@
                                     <i class="far fa-calendar"></i> {{ $createdAt }}
                                 </p>
                             {{ end }}
-                            {{ if not .Site.Params.recent_posts.hide_summary }}
+                            {{ if not .Site.Params.RecentPosts.HideSummary }}
                             <p class="intro">{{ .Summary }}</p>
                             {{ end }}
                         </div>
@@ -57,5 +56,4 @@
         </div>
     </div>
 </section>
-{{ end }}
 {{ end }}
