@@ -54,7 +54,7 @@
                         {{ range .Children.ByWeight }}
                           {{ if .HasChildren }}
                             <li class="dropdown-submenu">
-                              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Name }}<span class="caret right"></span></a>
+                              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Name }}<span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                 {{ range .Children.ByWeight }}
                                   <li><a href="{{ .URL }}">{{ .Name }}</a></li>
