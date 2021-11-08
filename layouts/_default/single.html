@@ -24,7 +24,7 @@
                     <div class="col-md-12" id="blog-post">
 
                         {{ if or .Params.author .Params.date }}
-                          <p class="text-muted text-uppercase mb-small text-right">
+                          <p class="text-muted mb-small text-right">
                             {{ with .Params.author }}
                               {{ . }}
                             {{ end }}
@@ -34,7 +34,7 @@
                               {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
                                   {{ $createdAt = replace $createdAt $month (i18n $month) }}
                               {{ end }}
-                              {{ $createdAt }}
+                              <i class="far fa-calendar"></i> {{ $createdAt }}
                             {{ end }}
                           </p>
                         {{ end }}

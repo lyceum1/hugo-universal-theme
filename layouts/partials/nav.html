@@ -38,7 +38,15 @@
 
                   {{ if and (or (eq $current.Permalink .URL) (eq "term" $current.Kind)) (in (slice "page" "term") $current.Kind) }}
                     {{ range (split .URL "/") }}
-                      {{ if eq "blog" . }}
+                      {{ if eq "news" . }}
+                        {{ $active = "active" }}
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+
+                  {{ if .HasChildren }}
+                    {{ range $child := .Children }}
+                      {{ if hasPrefix $current.RelPermalink $child.URL }}
                         {{ $active = "active" }}
                       {{ end }}
                     {{ end }}
@@ -46,8 +54,12 @@
 
                   <li class="dropdown {{ $active }}">
                   {{ if .HasChildren }}
-                    <!-- Check if the first child marks a menu section identifier -->
-                    {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
+                    {{ $hasSections := false }}
+                    {{ range .Children }}
+                      {{ if .HasChildren}}
+                        {{ $hasSections = true }}
+                      {{ end }}
+                    {{ end }}
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       {{ if $hasSections }}
@@ -62,12 +74,12 @@
                               </ul>
                             </li>
                           {{ else }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ if hasPrefix .URL "/" }}
+                              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ else }}
+                              <li><a href="{{ .URL }}" target="_blank"><i class="fas fa-external-link-alt"></i> {{ .Name }}</a></li>
+                            {{ end }}
                           {{ end }}
-                        {{ end }}
-                      {{ else }}
-                        {{ range .Children.ByWeight }}
-                          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                         {{ end }}
                       {{ end }}
                     </ul>
